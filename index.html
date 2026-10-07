@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>あなたらしい進み方がわかる｜星の強み診断</title>
+  <meta name="description" content="太陽星座と守護星をもとに、自分を見つめるヒントをお届けします。12星座から選んで、あなたの強みと自分らしい進み方を見つけてみませんか。">
+  <meta property="og:title" content="あなたらしい進み方がわかる｜星の強み診断">
+  <meta property="og:description" content="太陽星座と守護星から、あなたの強みと今日から試せるヒントをお届けします。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Lumiere">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#faf1f3">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./results.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="brand"><span class="brand-name">Lumiere</span><span class="brand-caption">夜明けの光</span></header>
+  <main id="main">
+    <section id="selection" aria-labelledby="app-title">
+      <div class="intro">
+        <p class="eyebrow">公式LINE 登録プレゼント</p>
+        <h1 id="app-title"><span>あなたらしい進み方がわかる</span>星の強み診断</h1>
+        <div class="rule" aria-hidden="true"></div>
+        <p>太陽星座と守護星をもとに、<br class="mobile-break">自分を見つめるヒントをお届けします。</p>
+        <p class="intro-note">暮らしにも、活動にも、やってみたいことにも。<br>あなたの持ち味を、次の一歩に。</p>
+      </div>
+      <form id="diagnosis-form" class="selection-panel">
+        <fieldset>
+          <legend>あなたの星座は何座ですか？</legend>
+          <p id="sign-help" class="help">太陽星座は、ふだん「私は○○座」と呼んでいる星座です。</p>
+          <div id="sign-options" class="sign-grid" aria-describedby="sign-help"></div>
+        </fieldset>
+        <p id="selection-status" class="selection-status" role="status">12星座から1つ選ぶと、結果を見ることができます。</p>
+        <button id="show-result" class="primary" type="submit" disabled>私の強みを見る</button>
+      </form>
+      <details class="explanation"><summary>太陽星座と守護星について</summary><p>太陽星座は、生まれたときに太陽が位置していた星座。守護星は、その星座の持ち味と結びつけて考える天体です。この診断では、蠍座は火星、水瓶座は土星、魚座は木星という対応を使っています。</p><p>結果は性格や未来を決めるものではありません。ご自身の経験と照らし合わせ、心に響くヒントを受け取ってください。</p></details>
+    </section>
+    <section id="result" class="result-panel" aria-labelledby="result-heading" hidden>
+      <div class="result-header">
+        <p class="eyebrow">あなたらしい進み方がわかる｜星の強み診断</p>
+        <p class="sign-heading"><span id="result-symbol" aria-hidden="true"></span><span id="result-sign"></span></p>
+        <p id="result-ruler" class="ruler"></p>
+        <h2 id="result-heading" tabindex="-1"></h2>
+      </div>
+      <div id="result-sections" class="result-sections"></div>
+      <div class="result-end"><p>いまの自分にしっくりくる言葉を、<br>ひとつ、持ち帰ってみてください。</p><button id="choose-again" class="secondary" type="button">星座を選び直す</button></div>
+      <p class="result-note">太陽星座と守護星をもとにした、自分を見つめるヒントです。性格や未来を決めるものではありません。</p>
+    </section>
+    <noscript><p class="noscript">診断を表示するには、ブラウザーのJavaScriptを有効にしてください。</p></noscript>
+  </main>
+  <footer><p>名前や生年月日の入力は不要です。<br>選んだ星座を外部へ送信・保存しません。</p><span>Lumiere · 夜明けの光</span></footer>
+</body>
+</html>
